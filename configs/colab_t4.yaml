@@ -1,0 +1,24 @@
+# Colab T4 free tier (16 GB VRAM). Models are loaded ONE AT A TIME and freed afterwards.
+llm:                       # model that plays the framework (civil / common law simulation)
+  type: hf
+  model: Qwen/Qwen2.5-3B-Instruct
+  dtype: float16
+  max_new_tokens: 512
+  temperature: 0.0
+
+scorer:                    # §4.2 fine-tuned logit scorer
+  base_model_id: Qwen/Qwen2.5-0.5B-Instruct
+  agg: last
+  dtype: float32
+  epochs: 8
+  out_dir: outputs/logit_scorer
+
+evaluation:                # §4.4 (paper used GPT/Claude/Gemini families; replaced with open models that fit a T4)
+  out_dir: outputs/eval
+  candidates:
+    - {type: hf, model: Qwen/Qwen2.5-0.5B-Instruct, dtype: float16, max_new_tokens: 512}
+    - {type: hf, model: Qwen/Qwen2.5-1.5B-Instruct, dtype: float16, max_new_tokens: 512}
+    - {type: hf, model: Qwen/Qwen2.5-3B-Instruct,   dtype: float16, max_new_tokens: 512}
+    - {type: hf, model: microsoft/Phi-3.5-mini-instruct, dtype: float16, max_new_tokens: 512}
+  judges:                  # strong(er) model as judge; 4-bit keeps it ~5.5 GB. Swap for an API judge if you have a key.
+    - {type: hf, model: Qwen/Qwen2.5-7B-Instruct, load_in_4bit: true, max_new_tokens: 700}

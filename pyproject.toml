@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unified-legal-reasoning"
+version = "0.1.0"
+description = "Unified legal reasoning framework (rule-based + abductive + case-based) with LLMs"
+requires-python = ">=3.10"
+dependencies = ["pyyaml", "numpy", "matplotlib"]
+
+[project.optional-dependencies]
+gpu = ["torch", "transformers>=4.44", "accelerate", "bitsandbytes", "peft>=0.11"]
+api = ["openai", "anthropic", "google-genai"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

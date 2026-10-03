@@ -1,0 +1,6 @@
+# Offline smoke test (no GPU, no API)
+llm: {type: mock}
+evaluation:
+  out_dir: outputs/eval_mock
+  candidates: [{type: mock, name: mock-a}, {type: mock, name: mock-b}]
+  judges: [{type: mock, name: mock-judge}]

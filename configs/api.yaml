@@ -1,0 +1,12 @@
+# Closest to the paper: API models (set OPENAI_API_KEY / ANTHROPIC_API_KEY / GEMINI_API_KEY).
+# Model names in the paper (gpt-4o, claude-3-5-sonnet, gemini-1.5-*) may be retired: edit to current ones.
+llm: {type: gemini, model: gemini-2.0-flash}
+evaluation:
+  out_dir: outputs/eval_api
+  candidates:
+    - {type: openai, model: gpt-4o-mini}
+    - {type: gemini, model: gemini-2.0-flash}
+    - {type: anthropic, model: claude-3-5-haiku-latest}
+  judges:
+    - {type: openai, model: gpt-4o}
+    - {type: anthropic, model: claude-sonnet-4-5}
