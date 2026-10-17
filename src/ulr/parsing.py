@@ -17,15 +17,21 @@ def _clean(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "").replace("**", "").replace("*", "")).strip(" :-\n\t")
 
 
+_RESTATE = re.compile(r"\bwhether\b|\bto determine\b|\bto evaluate\b|\blet'?s\b|\?\s*$", re.I)
+
+
 def parse_verdict(text: str, issue: Issue) -> Optional[bool]:
-    """True -> the issue's claim holds (e.g. guilty); False -> negated claim; None -> inconclusive."""
+    """True -> the issue's claim holds (e.g. guilty); False -> negated claim; None -> inconclusive.
+    Sentences that merely restate the question ("To determine whether ... is guilty") are ignored, and the
+    LAST conclusion-cue sentence wins (small models often restate the question first, conclude last)."""
     pos = re.compile(issue.positive_pattern, re.I)
     neg = re.compile(issue.negative_pattern, re.I)
     sents = [s for s in _SENT.split(text.replace("\n", " ")) if pos.search(s) or neg.search(s)]
+    sents = [s for s in sents if not _RESTATE.search(s)] or sents
     if not sents:
         return None
     cue = [s for s in sents if _CUES.search(s)]
-    chosen = cue[0] if cue else sents[-1]
+    chosen = cue[-1] if cue else sents[-1]
     return False if neg.search(chosen) else True
 
 
@@ -45,10 +51,10 @@ def _statement(title: str, argument: str) -> str:
 
 
 def _strip_arg_label(s: str) -> str:
-    return _clean(re.sub(r"(?i)^\s*(?:\*\*)?argument\s*:?(?:\*\*)?", "", s.strip()))
+    return _clean(re.sub(r"(?i)^\s*(?:\*\*)?(?:argument|lập luận)\s*:?(?:\*\*)?", "", s.strip()))
 
 
-_HYP_HEAD = re.compile(r"(?mi)^[ \t>#*-]*Hypothes[ie]s\s*(\d+[a-z]?)\b[^\n]*")
+_HYP_HEAD = re.compile(r"(?mi)^[ \t>#*-]*(?:Hypothes[ie]s|Giả thuyết)\s*(\d+[a-z]?)\b[^\n]*")
 
 
 def parse_hypotheses(text: str, source: str = "abductive", side: Optional[str] = None) -> List[Hypothesis]:
@@ -58,7 +64,7 @@ def parse_hypotheses(text: str, source: str = "abductive", side: Optional[str] =
         for i, m in enumerate(heads):
             end = heads[i + 1].start() if i + 1 < len(heads) else len(text)
             body = text[m.end():end]
-            rest = re.sub(r"(?i)^[\W_]*hypothes[ie]s\s*\d+[a-z]?", "", m.group(0))
+            rest = re.sub(r"(?i)^[\W_]*(?:hypothes[ie]s|giả thuyết)\s*\d+[a-z]?", "", m.group(0))
             mm = re.match(r"\s*\*{0,2}\s*(?:\(([^)]*)\))?\s*\*{0,2}\s*[:.\-–]?\s*(.*)", rest, re.S)
             label, remainder = _clean(mm.group(1) or ""), _clean(mm.group(2))
             if label:

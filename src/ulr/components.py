@@ -65,9 +65,12 @@ class Hypothesis:
 class Outcome:
     issue: Issue
     holds: Optional[bool] = None  # True: claim holds; False: negated claim; None: undetermined
+    override_text: Optional[str] = None  # e.g. graded outcomes such as "partially accepted" (ALQAC)
 
     @property
     def text(self) -> str:
+        if self.override_text:
+            return self.override_text
         if self.holds is None:
             return "undetermined"
         return self.issue.claim if self.holds else self.issue.negated_claim

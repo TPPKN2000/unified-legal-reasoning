@@ -38,3 +38,10 @@ def test_case_based():
 def test_json():
     assert extract_json('```json\n{"a": 1}\n```') == {"a": 1}
     assert extract_json("nope") is None
+
+
+def test_verdict_restated_question_then_conclusion():
+    # real Qwen2.5-3B output pattern (Colab run): restates the question first, concludes last
+    t = ("To determine whether the defendant is guilty of theft based on the given facts and rules, let's break down each element.\n"
+         "1. Action ok.\nTherefore, according to the given rules, the defendant is not guilty of theft.")
+    assert parse_verdict(t, ISSUE) is False

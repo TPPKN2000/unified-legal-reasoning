@@ -1,0 +1,21 @@
+# ALQAC explainability experiment (Colab T4). The OUTCOME IS GIVEN; we evaluate the explanation, not the prediction.
+llm:
+  type: hf
+  model: Qwen/Qwen2.5-3B-Instruct
+  dtype: float16
+  max_new_tokens: 900
+  temperature: 0.0
+
+alqac:
+  cases: data/alqac/ALQAC_public_test_sample.json
+  corpus: data/alqac/corpus_law_pub_sample.json
+  law_aliases: data/alqac/law_aliases.json
+  theory_source: oracle        # oracle = provisions cited by the court | rag = BM25 over the corpus
+  top_k_hypotheses: 3
+  max_fact_chars: 16000
+  decontaminate: false         # true = drop case_fact sentences that are near-verbatim court reasoning
+  baseline: true               # extra rule-based call without hypotheses (for the consistency lift)
+  out_dir: outputs/xai
+  system: "Bạn là chuyên gia pháp lý Việt Nam. Hãy lập luận chặt chẽ và trả lời bằng tiếng Việt."  # null = paper-exact (no system prompt)
+  llm_judge: null              # e.g. {type: hf, model: Qwen/Qwen2.5-7B-Instruct, load_in_4bit: true, max_new_tokens: 700}
+  embed_model: null            # e.g. AITeamVN/Vietnamese_Embedding (needs sentence-transformers)

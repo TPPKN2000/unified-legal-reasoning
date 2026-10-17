@@ -1,0 +1,11 @@
+{
+  "_comment": "law name as written in related_law_provisions -> law_id used in the corpus. Extend for your full corpus; entries are only used when the corpus contains that law AND its articles expose an article number (see docs/ALQAC_XAI.md).",
+  "Bộ luật dân sự năm 2015": "91/2015/QH13",
+  "Bộ luật Dân sự năm 2015": "91/2015/QH13",
+  "Bộ luật dân sự năm 2005": "33/2005/QH11",
+  "Bộ luật tố tụng dân sự năm 2015": "92/2015/QH13",
+  "Bộ luật Tố tụng dân sự năm 2015": "92/2015/QH13",
+  "Luật Đất đai năm 2003": "13/2003/QH11",
+  "Luật Xây dựng năm 2014": "50/2014/QH13",
+  "Luật Các tổ chức tín dụng năm 2010": "47/2010/QH12"
+}

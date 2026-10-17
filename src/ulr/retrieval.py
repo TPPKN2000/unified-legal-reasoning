@@ -11,16 +11,19 @@ from typing import Dict, List, Optional
 from .components import Fact, Issue, Outcome, Precedent, Theory
 
 _STOP = set("a an the of to in on and or is was were be by for with as at that this it its from their his her he she".split())
+_STOP |= set("và của là các có được trong cho với này đã những một để theo khi tại từ thì".split())  # Vietnamese
 
 
 def _tok(s: str) -> List[str]:
-    return [w for w in re.findall(r"[a-z0-9]+", s.lower()) if w not in _STOP]
+    # unicode-aware (\w): the old [a-z0-9]+ split Vietnamese words at every accented letter
+    return [w for w in re.findall(r"\w+", s.lower()) if w not in _STOP]
 
 
 class BM25:
-    def __init__(self, docs: List[str], k1: float = 1.5, b: float = 0.75):
+    def __init__(self, docs: List[str], k1: float = 1.5, b: float = 0.75, tokenizer=None):
         self.k1, self.b = k1, b
-        self.toks = [_tok(d) for d in docs]
+        self.tokenize = tokenizer or _tok
+        self.toks = [self.tokenize(d) for d in docs]
         self.N = len(docs)
         self.avgdl = sum(len(t) for t in self.toks) / max(1, self.N)
         df = Counter(w for t in self.toks for w in set(t))
@@ -28,7 +31,7 @@ class BM25:
         self.tf = [Counter(t) for t in self.toks]
 
     def scores(self, query: str) -> List[float]:
-        q = _tok(query)
+        q = self.tokenize(query)
         out = []
         for tf, toks in zip(self.tf, self.toks):
             s = 0.0

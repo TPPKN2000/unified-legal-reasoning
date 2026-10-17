@@ -59,3 +59,10 @@ configs/            mock | colab_t4 | api       data/corpus, data/logit      scr
 - The paper does not specify the scalar head/aggregation for `Agg`; this repo uses last-token | mean | max pooling of the final hidden states + a linear head, trained with BCE. The shipped synthetic set (`data/logit`, 30 records) is a **smoke-test scale** dataset — build a real one before drawing conclusions. Case-based quadruples use a simple concatenation of present + precedent facts.
 - Paper §6 (policy-based, principled, cultural reasoning, hallucination/over-reliance) is discussed there as open issues and is **not** implemented; LLM outputs here are decision *support*, not legal advice.
 - Verified in the build sandbox (no GPU / no model downloads): prompts, parsing, both court flows, judges, RAG, evaluation pipeline and report (mock backend), 20 unit tests. **Not verified there**: HF local backends and `scoring.py` (need torch/transformers/peft and model weights) — run the notebook's smoke cells on Colab first.
+
+## ALQAC-format data & explainability experiment (ALQAC-XAI)
+`data/alqac/` holds ALQAC-format samples (`ALQAC_public_test_sample.json`, `corpus_law_pub_sample.json`, `law_aliases.json`).
+`python scripts/inspect_alqac.py` checks schema / leakage; `python scripts/run_alqac_xai.py [--backend mock] [--theory-source oracle|rag] [--decontaminate]`
+runs the outcome-GIVEN explanation experiment (abductive F,T,O→H, then rule-based F,T,H) and writes `outputs/xai/<run>/{records.jsonl,metrics.json,report.md}`.
+It evaluates explanation quality (citations, coverage of the court's reasoning, grounding, explanation↔outcome consistency), **not** prediction accuracy.
+Details and limits: `docs/ALQAC_XAI.md`.

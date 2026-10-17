@@ -56,12 +56,31 @@ _CASE_NOT_GUILTY = (
 )
 
 
+_VI_HYPS = (
+    "Giả thuyết 1: Căn cứ pháp lý hỗ trợ kết quả (Điều 584)\n"
+    "Lập luận: Theo Điều 584, người gây thiệt hại phải bồi thường; các dữ kiện cho thấy hành vi và thiệt hại có quan hệ nhân quả.\n\n"
+    "Giả thuyết 2: Lỗi hỗn hợp của các bên (Điều 603)\n"
+    "Lập luận: Cả hai bên đều có lỗi nên trách nhiệm được chia theo mức độ lỗi, theo Điều 603.\n\n"
+    "Giả thuyết 3: Thiếu chứng cứ chứng minh một phần yêu cầu (Điều 91)\n"
+    "Lập luận: Nguyên đơn chưa cung cấp đủ chứng cứ cho toàn bộ yêu cầu nên chỉ một phần được chấp nhận.\n"
+)
+
+
 class MockBackend(LLMBackend):
     def __init__(self, name: str = "mock", **_):
         self.name = name
 
     def generate(self, prompt: str, system: Optional[str] = None, max_new_tokens=None, temperature=None) -> str:
         p = prompt
+        if "EXPLAINS a known court outcome" in p:  # ALQAC-XAI judge
+            crit = ["faithfulness_to_facts", "legal_grounding", "coverage_of_court_reasoning", "logical_structure", "clarity"]
+            return json.dumps({c: {"score": 3 + (i % 2), "explanation": "mock"} for i, c in enumerate(crit)} | {"overall_comment": "mock"})
+        if "Tòa án" in p and "Please suggest hypotheses" in p:  # Vietnamese ALQAC prompts
+            return _VI_HYPS
+        if "Tòa án" in p and "Assuming these hypotheses are true" in p:
+            return "Phân tích theo các giả thuyết trên. Do đó, Tòa án chấp nhận một phần yêu cầu khởi kiện của nguyên đơn theo Điều 584 và Điều 603."
+        if "Tòa án" in p and "please evaluate whether" in p:
+            return "Do đó, Tòa án không chấp nhận yêu cầu khởi kiện của nguyên đơn."
         if "You are a legal expert evaluating AI model responses" in p:
             resp = p.split("RESPONSE TO EVALUATE:")[1].split("EVALUATION CRITERIA:")[0]
             base = 3 + (len(resp) % 3)  # 3..5, deterministic
