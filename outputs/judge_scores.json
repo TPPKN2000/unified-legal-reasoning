@@ -1,0 +1,505 @@
+{
+ "case_8732|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 5.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 4.2
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The AI explanation fails to address the core issues of the case, including the nature of the loan, the parties involved, the agreed terms, and the specific claims and defenses presented in the court."
+  ]
+ },
+ "case_4101|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 5.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 4.2
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "Ownership determination of the dog",
+   "Responsibility assignment based on negligence",
+   "Details of the accident and its cause"
+  ]
+ },
+ "case_4337|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 5.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 4.2
+  },
+  "alignment": 3,
+  "contradicts": false,
+  "missing": [
+   "The detailed reasoning behind each decision",
+   "Specific evidence and arguments discussed in the court's ground",
+   "The request for the adjustment of the land certificate"
+  ]
+ },
+ "case_4588|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 3.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 3.8
+  },
+  "alignment": 3,
+  "contradicts": false,
+  "missing": [
+   "Time limits for inheritance",
+   "Involvement of foreign parties",
+   "Specific distribution of the house as per the court's decision"
+  ]
+ },
+ "case_4616|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "Time Limit for Filing a Lawsuit"
+  ]
+ },
+ "case_6616|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 4.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The court's determination that the time limit for the inheritance claim has expired but the diadem can still be managed by the state if there is no one managing it.",
+   "The court's detailed explanation of the distribution of the estate based on the legal provisions and the specific circumstances of the case.",
+   "The court's reasoning about the heirs and their rights based on the legal provisions and the specific circumstances of the case."
+  ]
+ },
+ "case_5226|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "...the necessity of collecting evidence from previous cases and the procedural aspects of the case."
+  ]
+ },
+ "case_6284|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 5.0,
+   "overall": 4.2
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "[1] About jurisdiction: The AI explanation does not mention the court's analysis of the jurisdiction.",
+   "[2] About the proceedings: The AI explanation does not discuss the court's decision on the viva voce procedure.",
+   "[3] About the requests: The AI explanation does not address the court's detailed analysis of each request, including the reasons for rejecting the request to declare the contract invalid and the request for compensation."
+  ]
+ },
+ "case_3995|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The AI explanation does not address the core issue of land disputes between the parties involved (Mr. Trần Văn T and Mr. Nguyễn Văn V)."
+  ]
+ },
+ "case_6384|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "...about the trees and the monetary compensation"
+  ]
+ },
+ "case_8219|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 4.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The court's detailed analysis of the Civil Code articles (Article 463, 471, 474, 477)",
+   "The court's explicit statement on the jurisdiction of the court (Hội đồng xét xử nhận định)",
+   "The court's handling of the absenteeism (Hội đồng xét xử giải quyết vắng mặt ông N)",
+   "The court's application of the Civil Code 2005",
+   "The court's acceptance or rejection of the claims based on the evidence provided"
+  ]
+ },
+ "case_2705|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The time limit for filing a lawsuit (3 years)",
+   "The invalidation of the contract (the contract was voided on July 26, 2013)",
+   "The rights and obligations of the parties involved (the plaintiff's right to demand the defendant to fulfill the agreed-upon obligations)"
+  ]
+ },
+ "case_3263|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 4.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The vouching of the parties (Bà H and bà T) and their agreement on the amounts.",
+   "The specific amounts agreed upon (279,000,000 for hushi month, 431,000,000 for hushi day, and 365,000,000 for loan).",
+   "The final decision on the interest (not being accepted)."
+  ]
+ },
+ "case_9125|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 4.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 4.0,
+   "overall": 4.2
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "[1] Quan hệ pháp luật và tư cách đương sự",
+   "[2] Về thủ tục tố tụng",
+   "[3] Xét yêu cầu khởi kiện, chứng cứ của nguyên đơn"
+  ]
+ },
+ "case_5658|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The court explicitly states that the case falls under the jurisdiction of the People's Court of District North Từ Liêm, citing specific articles of the Civil Procedure Law. The AI explanation does not mention this point."
+  ]
+ },
+ "case_5045|rag": {
+  "paper": {
+   "reasonableness": 3.0,
+   "completeness": 3.0,
+   "clarity": 3.0,
+   "logical_structure": 3.0,
+   "framework_adherence": 3.0,
+   "overall": 3.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The AI explanation does not mention the specific article (Article 254 and Article 253 of the Civil Code) that the court used to support its decision.",
+   "It does not address the court's reasoning about the transfer of land rights and the lack of specific regulations regarding shared pathways in the Civil Code 2015.",
+   "The explanation does not discuss the court's point about the legality of the request for the return of the shared pathway based on the Civil Code 2015."
+  ]
+ },
+ "case_4920|rag": {
+  "paper": {
+   "reasonableness": 3.0,
+   "completeness": 3.0,
+   "clarity": 3.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 3.0,
+   "overall": 3.2
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "[1.1] About the relationship of the dispute: The AI explanation does not mention the relationship between the parties and the nature of the dispute.",
+   "[1.2] About the authority to resolve disputes: The AI explanation does not discuss the jurisdiction of the court.",
+   "[1.3] About the withdrawal of part of the claims: The AI explanation does not address the withdrawal of the claims and its compatibility with the law.",
+   "[2] About the content of the case: The AI explanation does not provide details about the content of the contracts and the payment process."
+  ]
+ },
+ "case_8758|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 3.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 3.8
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The court's analysis of the specific facts, including the lack of agreement between the parties regarding the use of the disputed land.",
+   "The court's explicit mention of the plaintiff's right to request that the defendant's family manage and use the disputed land as per the plaintiff's request."
+  ]
+ },
+ "case_9089|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 4.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "(1) About the trial procedures: The AI explanation does not mention the principle of viva voce trial and the reasons for its application.",
+   "(2) About the relationship of law and jurisdiction for resolution: The AI explanation does not discuss the relationship between the plaintiff's claim and the defendant's defense.",
+   "(3) About the origin of the land and the process of using the land: The AI explanation does not provide details about the measurement and appraisal results.",
+   "(4) About the issuance of land certificates and the area of the plots: The AI explanation does not address the discrepancy in the area of the land certificates and its impact on the plaintiff's rights."
+  ]
+ },
+ "case_127|rag": {
+  "paper": {
+   "reasonableness": 3.0,
+   "completeness": 3.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 3.6
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The court's analysis of the legal basis for each claim, including the requirement that the heir must be the person who legally inherits the property.",
+   "The court's detailed explanation of the legal grounds for rejecting certain claims, such as the inability to invalidate a transaction that has been registered with the Land Administration.",
+   "The court's final conclusion that only one claim can be accepted due to the time limit for invalidating transactions."
+  ]
+ },
+ "case_2978|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "[1] About the procedural rules: The AI explanation does not mention the procedural rules and the fact that the plaintiff's representative and the defendant's representatives were present.",
+   "[2] About the content: The AI explanation does not discuss the content of the lawsuit, such as the request for the return of the assets and the production process.",
+   "[3] About the evidence: The AI explanation does not address the evidence provided by the plaintiff and the defendants.",
+   "[4] About the legal entity: The AI explanation does not mention the establishment of the legal entities and their representatives.",
+   "[5] About the legal entities: The AI explanation does not discuss the establishment of the legal entities and their representatives.",
+   "[7] About the final decision: The AI explanation does not conclude that the plaintiff's claims should be rejected based on the analysis of each claim."
+  ]
+ },
+ "case_4579|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 3.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 3.8
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The plaintiff's claim under Article 254 of the Civil Code 2015 is mentioned but not fully explained.",
+   "The validity of the plaintiff's claim based on the original documents is not thoroughly examined.",
+   "The specific details regarding the path and its alignment with the original documents are not addressed."
+  ]
+ },
+ "case_5236|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The procedural aspects of the case, such as the failure of the parties to appear in court and the subsequent actions taken by the court.",
+   "The specific content of the agreements made between the parties regarding the payment of money for playing the associations."
+  ]
+ },
+ "case_6663|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 4.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 5.0,
+   "overall": 4.2
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The court's detailed analysis of the contracts' legality and the obligations of the parties.",
+   "The court's discussion of the time limit for filing lawsuits under Article 429 of the Civil Code.",
+   "The court's emphasis on the fact that the absence of the parties does not affect the validity of the contracts and their responsibilities."
+  ]
+ },
+ "case_4861|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The AI explanation does not mention the need for the original land certificates to be invalidated before the inheritance can proceed.",
+   "It does not address the fact that the original land certificates were issued before the death of the first deceased (H7).",
+   "The explanation does not discuss the requirement for the heirs to compensate those who have already received portions of the inheritance.",
+   "It overlooks the necessity of resolving the issue of the original land certificates before proceeding with the inheritance."
+  ]
+ },
+ "case_3241|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "...",
+   "The AI explanation does not mention the registration of the property and the calculation of the debt, which are crucial for the court's decision."
+  ]
+ },
+ "case_1087|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 3.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 3.8
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "Time Limit for Filing a Suit for Damages",
+   "Application of Law",
+   "Time Limit for Filing a Suit for Contract Disputes",
+   "Right to Request Compensation for Damage",
+   "Compensation for Violation of Right to Property"
+  ]
+ },
+ "case_9052|rag": {
+  "paper": {
+   "reasonableness": 4.0,
+   "completeness": 3.0,
+   "clarity": 4.0,
+   "logical_structure": 4.0,
+   "framework_adherence": 4.0,
+   "overall": 3.8
+  },
+  "alignment": null,
+  "contradicts": null,
+  "missing": null
+ },
+ "case_5160|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "[1] About the relationship between the parties, statute of limitations, and jurisdiction",
+   "[2] About the qualification of the parties involved in the case",
+   "[3] About the power of attorney",
+   "[4] About the content of the case",
+   "[5] The court's reasoning on the inheritance"
+  ]
+ },
+ "case_8147|rag": {
+  "paper": {
+   "reasonableness": 5.0,
+   "completeness": 5.0,
+   "clarity": 5.0,
+   "logical_structure": 5.0,
+   "framework_adherence": 5.0,
+   "overall": 5.0
+  },
+  "alignment": 1,
+  "contradicts": true,
+  "missing": [
+   "The court's reasoning on the diadem inheritance, including the determination of the diadem's value and its distribution among the heirs.",
+   "The court's specific discussion on the diadem's use for worship and the exclusion of this part from inheritance.",
+   "The court's detailed analysis of the distribution of the remaining diadem among the heirs, particularly focusing on the rights of the heirs who were minors at the time of the diadem's creation."
+  ]
+ }
+}
